@@ -1,0 +1,9 @@
+1. Create a node server that runs on the 8080 port.
+2. Define an object with 6 properties and an array with 7 members in a separate file and export them.
+3. Create a separate file for writing and reading files
+4. Define a write File function that uses the fs.writeFile() to write to a file. This function should be able to write to many different files
+    (Hint: the path of the file should be passed as an argument)
+5. Create a readFile function that uses the fs.readFile() to read contents of a file. Just like the write function it should work with many different file paths.
+6. Include both functions, the array and the object in the main app file, and write their contents to two different files
+    (So, the contents of the object should be written to a file like object.txt, and the array contents to array.text)
+7. Read the file contents of both file.

@@ -1,5 +1,16 @@
+
+/**
+ * Importing the http module, assigning it to a value.
+ */
 const http = require('http');
+/**
+ * Importing our own files. Note the difference in the path passed as an argument (The relative path denoted with ./)
+ */
 const promises = require('./promises');
+
+/**
+ * Creating a server using the createServer() method located in the http module.
+ */
 const server = http.createServer(
 //     (request, response) => {
 //     switch (request.url) {
@@ -39,6 +50,9 @@ fileSystem.readFromFile();
 // console.log(multiplyThree(4, 5, 6));
 
 
+/**
+ * Starting a server using the listen() method. An argument for a port is usually provided, as well as an annonymous function that reports if the server is started.
+ */
 server.listen(3000, () => {
     console.log('Server started!');
 })
