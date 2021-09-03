@@ -1,0 +1,5 @@
+https://google.com
+
+https://myblog.com/posts/17
+
+https://myblog.com/posts?page=2&pageSize=50

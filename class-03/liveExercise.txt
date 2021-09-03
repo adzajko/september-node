@@ -1,0 +1,3 @@
+Create a http server running on 8000 port
+Download and install express in your app via npm
+Configure express with a single DELETE route on /customers/:id which returns the dynamic ID as response.

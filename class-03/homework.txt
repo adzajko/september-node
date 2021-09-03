@@ -1,0 +1,12 @@
+1. Create a http server running on port 3000
+2. Install and configure express in your application
+3. Create the following requests: 
+
+   GET /songs which should return any Query Params sent to it as the response.
+    In the case of no query params, an error response should be sent back. (Hint: 4xx status codes )
+
+    POST /detectives which should parse the incoming request body and write it to a file using filesystem. 
+        The response should be 201 if the writing op is successful and 500 if otherwise
+        (Hint: the response should only be sent after the file write operation finishes using async / await or .then())
+
+    
