@@ -1,0 +1,1 @@
+{"name":"Brian Jonestown Massacre","genre":"alternative rock","active":true,"albums":18,"favoriteSong":"Straight Up and Down","honorableMention":"Fingertips"}
