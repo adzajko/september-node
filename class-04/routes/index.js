@@ -1,4 +1,9 @@
 const router = require('express').Router();
+/**
+ * Both imports are required for configuring the swagger UI
+ * First import is the library itself
+ * Second import is the location of the .json or .yaml file holding your API docs.
+ */
 const swaggerUi = require('swagger-ui-express');
 const apiDocs = require('../api-docs.json'); 
 
@@ -11,6 +16,10 @@ router.get('/planets/:id', planetsController.getPlanetById);
  * SWAGGER ROUTES
  */
 
+/**
+ * Both methods here are mandatory to show your Swagger UI.
+ * More or less, they remain copy/paste
+ */
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(apiDocs));
 
