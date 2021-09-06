@@ -15,3 +15,5 @@ router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(apiDocs));
 
 module.exports = router;
+
+// mongo.findOne({ id: 6 }) BSON

@@ -2,7 +2,10 @@ const Planet = require('../../models/planets');
 
 const getAllPlanets = async (req, res, next) => {
     const allPlanets = Planet.getAllPlanets();
-    res.status(200).json(allPlanets);
+    // res.status(200).json(allPlanets);
+    res.render('planets/planets', {
+        planets: allPlanets
+    })
 }
 
 const getPlanetById = async (req, res, next) => {
