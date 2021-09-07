@@ -1,0 +1,227 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Piperki API",
+    "description": "All the info you didn't need about Piperki",
+    "contact": {
+      "email": "adzajko@hotmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0-oas3"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Piperki",
+      "description": "Collection of requests for all piperki."
+    }
+  ],
+  "paths": {
+    "/piperki": {
+      "get": {
+        "tags": [
+          "Piperki"
+        ],
+        "summary": "Retrieves all the piperki.",
+        "description": "Fetch a list of all the piperki.\n",
+        "operationId": "getAllPiperki",
+        "responses": {
+          "200": {
+            "description": "List of all piperki",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Piperka"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Piperki"
+        ],
+        "summary": "Add a piperka.",
+        "description": "Add piperka",
+        "operationId": "addPiperka",
+        "requestBody": {
+          "description": "Piperka to add.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Piperka"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Piperka created."
+          },
+          "400": {
+            "description": "Invalid input, object invalid."
+          },
+          "409": {
+            "description": "An existing item already exists."
+          }
+        }
+      }
+    },
+    "/piperki/{id}": {
+      "get": {
+        "tags": [
+          "Piperki"
+        ],
+        "summary": "Get a single piperka's info.",
+        "operationId": "getPiperkaById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the piperka.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Piperka's info.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Piperka"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Piperki"
+        ],
+        "summary": "Edit a piperka's info",
+        "operationId": "editPiperka",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the piperka.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Piperka's info",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Piperka"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Piperka's info edited."
+          },
+          "400": {
+            "description": "Bad request, missing info."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Piperki"
+        ],
+        "summary": "Delete a piperka by id.",
+        "description": "Delete a piperka by it's id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the piperka.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Missing id!"
+          },
+          "500": {
+            "description": "Internal server error, piperka cannot be deleted."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Piperka": {
+        "required": [
+          "color",
+          "name",
+          "amountInStock"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "number",
+            "example": "1"
+          },
+          "name": {
+            "type": "string",
+            "example": "Zelena Piperka"
+          },
+          "amountInStock": {
+            "type": "number",
+            "description": "The amount of piperki of this type currently in stock.",
+            "example": 6801
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the piperka",
+            "example": "zelena"
+          }
+        }
+      }
+    }
+  }
+}
