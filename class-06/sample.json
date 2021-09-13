@@ -1,0 +1,11 @@
+{
+    "db": {
+        "users": [
+            {
+                "_id": 1,
+                "username": "ksdkoakdas",
+                "password": "jandsajndjasda"
+            }
+        ]
+    }
+}

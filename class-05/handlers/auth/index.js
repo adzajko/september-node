@@ -10,6 +10,7 @@ const { createToken } = require('../../middleware/jwt');
  */
 const logIn = (req, res, next) => {
     const {username, password} = req.body;
+    // const username = req.body.username;
     if ((!username || username !== 'xxx_vindizel_fastfurious_xxx') && (!password || password !== 'najjakio')) {
         return res.status(400).json('Missing or invalid credentials!')
 
@@ -19,7 +20,7 @@ const logIn = (req, res, next) => {
 
     // req.session.userId = username;
     // console.log(req.session);
-
+    // GUARDS
     const token = createToken(username)
     return res.status(200).json(token);
 }

@@ -1,0 +1,7 @@
+SELECT userName, password FROM users
+
+BSON = Binary JSON Mongo Express React Node MEAN = Mongo Express Angular Node
+
+NoSQL = Not Only SQL
+
+Schema
