@@ -1,0 +1,47 @@
+:root {
+  --app-primary: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  --app-dark: #212121;
+  --app-light: #f5f5f5;
+  --app-shadows-down: 3px 3px 5px 0 rgba(0, 0, 0, 0.4);
+  --app-shadows-up: 3px -3px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.app-header {
+  background: var(--app-primary);
+  position: relative;
+  box-shadow: var(--app-shadows-down);
+  padding: 1em;
+}
+
+.app-footer {
+  background-color: var(--app-dark);
+  box-shadow: var(--app-shadows-up);
+  padding: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--app-light);
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: 2em;
+  box-shadow: var(--app-shadows-down);
+  width: 50%;
+  margin: 150px auto 0 auto;
+  padding: 2em;
+  border-radius: 15px;
+}
