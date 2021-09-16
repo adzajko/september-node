@@ -11,6 +11,7 @@ export const login = async (dispatch, loginDetails) => {
     sessionStorage.setItem('currentUser', response.user.username);
   } catch (error) {
     dispatch({ type: LOGIN_ERROR });
+    throw error;
   }
 };
 

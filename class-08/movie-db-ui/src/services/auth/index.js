@@ -20,3 +20,8 @@ export const logIn = async (username, password) => {
 export const logOut = async () => {
   sessionStorage.clear();
 };
+
+export const registerNewUser = async (username, password) => {
+  const res = await axios.post(`${apiUrl}/register`, { username, password });
+  return res.data;
+}

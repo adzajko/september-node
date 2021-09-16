@@ -4,6 +4,7 @@
   --app-light: #f5f5f5;
   --app-shadows-down: 3px 3px 5px 0 rgba(0, 0, 0, 0.4);
   --app-shadows-up: 3px -3px 5px 0 rgba(0, 0, 0, 0.4);
+  --app-card-shadows: 0px 0px 3px 0 rgba(0, 0, 0, 0.3)
 }
 
 .grid-container {
@@ -36,7 +37,7 @@
   margin: 0;
 }
 
-.contact-form {
+.contact-form, .login-form, .register-form {
   display: grid;
   gap: 2em;
   box-shadow: var(--app-shadows-down);
@@ -44,4 +45,68 @@
   margin: 150px auto 0 auto;
   padding: 2em;
   border-radius: 15px;
+}
+
+.bg-smokey {
+  background: #D3CCE3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.register-container {
+  width: 50%;
+  margin: auto;
+}
+
+.nav-container {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 1em;
+  gap: 2rem;
+}
+
+.poster {
+  height: auto;
+  width: 100%;
+}
+
+.card {
+  box-shadow: var(--app-card-shadows);
+  padding: 10px;
+  max-width: 350px;
+  border-radius: 5px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  margin: auto;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.movie-title {
+  text-transform: uppercase;
+  font-size: 22px;
 }

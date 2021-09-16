@@ -5,18 +5,25 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './components/context';
 import { Routes } from './components/routes';
 
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import NavigationBar from './components/layout/nav';
+
 function App() {
   return (
     <section className='grid-container'>
       <Header />
-      <main>
+      <main className="bg-smokey">
         <AuthProvider>
           <Router>
+            <NavigationBar />
             <Routes />
           </Router>
         </AuthProvider>
       </main>
       <Footer />
+        <ToastContainer />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import { Button, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { sendMail } from '../../services/mailer';
 
 export const Contact = () => {
@@ -16,7 +17,13 @@ export const Contact = () => {
         email: formEmail,
         message: formMessage
       });
+      toast.success('Thank you!', {
+        position: 'bottom-right'
+      })
     } catch (error) {
+      toast.error('Could not send mail...', {
+        position: 'bottom-right'
+      })
     } finally {
       setFormName('');
       setFormEmail('');

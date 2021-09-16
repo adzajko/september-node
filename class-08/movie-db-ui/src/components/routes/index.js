@@ -3,6 +3,7 @@ import Login from '../login';
 import Movies from '../movies';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { Contact } from '../contact';
+import Register from '../register';
 
 const routes = [
   {
@@ -15,11 +16,19 @@ const routes = [
     path: '/home',
     component: Movies,
     exact: true,
-    isPrivate: true
+    isPrivate: false
   },
   {
     path: '/contact',
-    component: Contact
+    component: Contact,
+    isPrivate: false,
+    exact: false
+  },
+  {
+    path: '/register',
+    component: Register,
+    isPrivate: false,
+    exact: false
   },
   {
     path: '/',
@@ -42,7 +51,7 @@ const AppRoute = ({
       path={path}
       exact={exact}
       render={props =>
-        isPrivate && !Boolean(userDetails.user) ? (
+        isPrivate && !userDetails.user ? (
           <Redirect to={{ pathname: '/login' }} />
         ) : (
           <Component {...props} />
