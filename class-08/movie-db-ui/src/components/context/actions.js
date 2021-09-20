@@ -6,9 +6,9 @@ export const login = async (dispatch, loginDetails) => {
 
   try {
     const response = await logIn(loginDetails.username, loginDetails.password);
-    dispatch({ type: LOGIN, payload: response });
     sessionStorage.setItem('token', response.token);
     sessionStorage.setItem('currentUser', response.user.username);
+    dispatch({ type: LOGIN, payload: response });
   } catch (error) {
     dispatch({ type: LOGIN_ERROR });
     throw error;

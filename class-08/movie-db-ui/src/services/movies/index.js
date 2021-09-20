@@ -1,9 +1,13 @@
 import axios from 'axios';
-import { apiUrl, headers } from '../constants';
+import { apiUrl } from '../constants';
 
 export const getAllMovies = async () => {
   try {
-    const movies = await axios.get(`${apiUrl}/movies`, { headers });
+    const movies = await axios.get(`${apiUrl}/movies`, {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
+      }
+    });
     return movies.data;
   } catch (error) {
     console.log(error);
