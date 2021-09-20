@@ -1,0 +1,107 @@
+[
+    {
+        "make": "Audi",
+        "series": "A3",
+        "powerTrain": "diesel",
+        "l/100kmh": 6,
+        "color": "beige"
+    },
+    {
+        "make": "Audi",
+        "series": "A5",
+        "powerTrain": "gasoline",
+        "l/100kmh": 12,
+        "color": "black"
+    },
+    {
+        "make": "BMW",
+        "series": "M3",
+        "powerTrain": "Gasoline",
+        "l/100kmh": 20,
+        "color": "silver"
+    },
+    {
+        "make": "Lexus",
+        "series": "IS-250h",
+        "powerTrain": "hybrid",
+        "l/100kmh": 5,
+        "color": "white"
+    },
+    {
+        "make": "Opel",
+        "series": "Corsa",
+        "powerTrain": "diesel",
+        "l/100kmh": 4.7,
+        "color": "sky-blue"
+    },
+    {
+        "make": "Ford",
+        "series": "Fiesta",
+        "powerTrain": "diesel",
+        "l/100kmh": 5,
+        "color": "dark blue"
+    },
+    {
+        "make": "Ford",
+        "series": "Focus",
+        "powerTrain": "gasoline",
+        "l/100kmh": 8.7,
+        "color": "white"
+    },
+    {
+        "make": "Toyota",
+        "series": "Yaris",
+        "powerTrain": "gasoline",
+        "l/100kmh": 5.6,
+        "color": "grey"
+    },
+    {
+        "make": "Toyota",
+        "series": "Avensis",
+        "powerTrain": "gasoline",
+        "l/100kmh": 9,
+        "color": "red"
+    },
+    {
+        "make": "Volkswagen",
+        "series": "Golf MK VII",
+        "powerTrain": "diesel",
+        "l/100kmh": 6,
+        "color": "black"
+    },
+    {
+        "make": "Peugeot",
+        "series": "207",
+        "powerTrain": "gasoline",
+        "l/100kmh": 7.2,
+        "color": "blue"
+    },
+    {
+        "make": "Citroen",
+        "series": "C3",
+        "powerTrain": "diesel",
+        "l/100kmh": 4.8,
+        "color": "white"
+    },
+    {
+        "make": "Toyota",
+        "series": "Corolla",
+        "powerTrain": "hybrid",
+        "l/100kmh": 4,
+        "color": "silver"
+    },
+    {
+        "make": "Land Rover",
+        "series": "Range Rover",
+        "powerTrain": "gasoline",
+        "l/100kmh": 23,
+        "color": "brown"
+    },
+    {
+        "make": "Zastava",
+        "series": "101",
+        "powerTrain": "nuclear fusion",
+        "l/100kmh": 0,
+        "color": "rust"
+    }
+]
