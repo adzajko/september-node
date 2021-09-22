@@ -1,0 +1,23 @@
+{
+  "name": "class-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \" nodemon services/posts \" \" nodemon services/proxy \" \" nodemon services/users \" --kill-others --kill-others-on-fail ",
+    "start-fail": "nodemon services/posts & nodemon services/proxy & nodemon services/users"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "mongoose": "^6.0.7"
+  }
+}
